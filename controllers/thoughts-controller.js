@@ -45,7 +45,7 @@ const thoughtsController = {
             .select('-__v')
             .then(dbThoughtsData => {
                 if (!dbThoughtsData) {
-                    res.status(404).json({ message: 'Now thought with this id!' })
+                    res.status(404).json({ message: 'No thought with this id!' })
                     return;
                 }
                 res.json(dbThoughtsData)
